@@ -257,7 +257,7 @@ section {
 .secondary:focus,
 .secondary:active {
   background-color: var(--color-brand1);
-  color: var(--color-bg);
+  color: var(--color-white);
 }
 
 button:disabled,
