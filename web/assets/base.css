@@ -172,7 +172,6 @@ div, button, .button {
   overflow-y: auto;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
-  text-shadow: 0 1px 1px #404040;
 }
 
 .big {
