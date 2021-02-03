@@ -67,7 +67,8 @@ function addColorSchemeToggle (_ele) {
   ele.innerHTML = '<div><div>☀️</div><div>🌙</div></div>';
   ele.addEventListener('click', onClick, false);
   // fix any settings after page load
-  detectColorScheme();
+  // we do this w/ setTimeout because of a race condition in certain browser's DOM handling
+  setTimeout(detectColorScheme, 1);
 }
 
 window.addEventListener('load', function () {
