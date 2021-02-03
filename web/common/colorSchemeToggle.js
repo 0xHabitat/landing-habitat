@@ -31,8 +31,18 @@ function setColor (tmp) {
   document.documentElement.setAttribute('data-theme', tmp);
 
   const nodes = document.querySelectorAll('object');
+  let flag = false;
   for (const node of nodes) {
     node.contentDocument.documentElement.setAttribute('data-theme', tmp);
+
+    if (!flag && node.contentDocument.readyState !== 'complete') {
+      console.log('retry', node);
+      flag = true;
+    }
+  }
+
+  if (flag) {
+    setTimeout(() => setColor(tmp), 100);
   }
 
   if (window.gradient) {
