@@ -32,7 +32,7 @@ function setColor (tmp) {
 
   const nodes = document.querySelectorAll('object');
   for (const node of nodes) {
-    node.getSVGDocument().documentElement.setAttribute('data-theme', tmp);
+    node.contentDocument.documentElement.setAttribute('data-theme', tmp);
   }
 
   if (window.gradient) {
