@@ -1,17 +1,47 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap');
+@import 'color.css';
 @import '../common/Gradient/style.css';
 
-:root {
-  --color-black: #000000;
-  --color-white: #ffffff;
-  --color-bg: #FAFDFFAC;
-  --color-error: #eb4d62;
-  --color-text: #000000;
-  --color-brand1: #635BFF;
-  --color-brand2: #1CDB9E;
-  --color-brand3: #3BDEFF;
-  --color-brand4: #FFCB57;
-  --font-family-default: 'Roboto';
+div#colorSchemeToggle {
+  background: white;
+  font-size: 30px;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-user-select: none;
+  position: sticky;
+  transform: translateZ(1000px);
+  top: 16px;
+  right: 24px;
+  float: right;
+}
+
+div#colorSchemeToggle.light {
+  background: white;
+}
+div#colorSchemeToggle.dark {
+  background: black;
+}
+
+div#colorSchemeToggle > div > div {
+  width: 32px;
+  height: 32px;
+  line-height: 33px;
+}
+
+div#colorSchemeToggle.dark > div {
+  margin-top: -32px;
+}
+
+.bgwhite {
+  background: var(--color-bg);
+}
+
+.lighten {
+  background-color: var(--color-frame);
+  border-radius: var(--border-radius-frame);
 }
 
 .navLogo {
@@ -35,10 +65,10 @@ body {
   bottom: 0;
   left: 0;
   position: absolute;
-  color: var(--color-text);
-  font-family: var(--font-family-default);
+  color: var(--color-black);
+  font-family: var(--font-family-default), sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 2vh;
   overflow: hidden;
   text-align: center;
   background-color: transparent;
@@ -51,13 +81,13 @@ body {
 div {
   display: block;
   margin: 0;
-  animation: opacity 0.3s ease-out;
+  animation: opacity .3s ease-out;
 }
 
 a, p {
   margin: 0 auto;
-  line-height: 1.7;
-  font-size: 1em;
+  line-height: 1.1;
+  font-size: 1rem;
   text-align: left;
   white-space: pre-wrap;
   word-break: break-word;
@@ -66,7 +96,7 @@ a, p {
 }
 
 a {
-  color: var( --color-brand1);
+  color: var(--color-brand1);
 }
 
 span, label, pre {
@@ -76,33 +106,34 @@ span, label, pre {
 p {
   display: block;
   font-weight: 400;
-  padding: 0 0.3em;
+  padding: 0;
   margin-block-start: 0 !important;
   margin-block-end: 0 !important;
 }
 
 h1, h2, h3 {
-  color: var( --color-text);
-  font-weight: 400;
+  color: var(--color-text);
+  font-weight: 600;
   display: block;
-  padding: 0 0.3em;
+  padding: 0;
   margin-block-start: 0 !important;
   margin-block-end: 0 !important;
 }
 
 h1 {
-  font-size: 2rem;
+  font-weight: 700;
+  font-size: 2em;
   line-height: 2;
 }
 
 h2 {
-  font-size: 1.7rem;
+  font-size: 1.7em;
   line-height: 1.7;
 }
 
 h3 {
-  font-size: .9rem;
-  line-height: 1;
+  font-size: 1.4em;
+  line-height: 1.4;
 }
 
 img {
@@ -124,33 +155,25 @@ img {
 }
 
 button, .button {
-  margin: 1em;
-  animation: opacity 1s ease-in;
-}
-
-button, .button {
   display: grid;
   place-content: center;
   min-width: 6em;
   max-width: max-content;
-  margin: 1em .3em;
+  margin: 1rem 1rem 0 0;
   padding: .7em;
   line-height: 1;
   text-align: center;
   color: var(--color-text);
-  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 6px;
   vertical-align: bottom;
   white-space: pre-wrap;
   cursor: pointer;
+  animation: opacity 1s ease-out;
 }
 
 div, button, .button {
-  transition: 0.3s ease-in;
-}
-
-.error {
-  color: var(--color-error);
+  transition: .3s ease-out;
 }
 
 .flex {
@@ -174,10 +197,6 @@ div, button, .button {
   -webkit-overflow-scrolling: touch;
 }
 
-.big {
-  padding: 1rem 2rem;
-}
-
 .col {
   flex-direction: column;
 }
@@ -186,28 +205,14 @@ div, button, .button {
   flex-direction: row;
 }
 
-.alt {
-  margin: .5rem 1rem;
-  background: none;
-  border: 1px solid var(--color-black);
-}
-
-.alt:hover {
-  background: var(--color-white);
-  color: var(--color-black);
-}
-
-.bgwhite {
-  background: #ffffffd9;
-}
-
 .logoShadow {
+  background: #000000;
   box-shadow: 0 1px 3px var(--color-black);
   border-radius: 32px;
 }
 
 footer a {
-  color: var(--color-black);
+  color: var(--color-text);
 }
 
 #tech > div {
@@ -236,31 +241,55 @@ section {
   width: 100%;
 }
 
-.primary {
-  background-color: var(--color-brand1);
-  color: var(--color-white);
+button:hover,
+button:focus,
+button:active,
+.button:hover,
+.button:focus,
+.button:active {
+  transform: translateY(-6px);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
-.primary:hover,
-.primary:focus,
-.primary:active {
-  background-color: var(--color-white);
+
+.blue {
+  background-color: var(--color-blue);
   color: var(--color-black);
 }
 
-.secondary {
-  background-color: var(--color-white);
-  color: var(--color-black);
-}
-
-.secondary:hover,
-.secondary:focus,
-.secondary:active {
-  background-color: var(--color-brand1);
+.lila {
+  background-color: var(--color-lila);
   color: var(--color-white);
 }
 
-button:disabled,
-.button:disabled {
-  background: #d5d5d5a6;
-  box-shadow: none;
+.black {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.yellow {
+  background-color: var(--color-yellow);
+  color: var(--color-black);
+}
+
+.left {
+  text-align: left;
+}
+
+.padh {
+  padding: 0 1rem;
+}
+
+.padv {
+  padding: 1rem 0;
+}
+
+img.minmax {
+  width: 40rem;
+  max-width: 100%;
+}
+
+.whitetext {
+  color: var(--color-white);
+  text-shadow: 0 1px 6px black;
+  line-height: 1.2;
 }

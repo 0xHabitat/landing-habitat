@@ -519,5 +519,12 @@ function normalizeColor(hexCode) {
   * Gradient.toggleColor(index)
   * Gradient.updateFrequency(freq)
   */
-  var gradient = new Gradient();
-      gradient.initGradient("#gradient-canvas");
+var gradient = new Gradient();
+gradient.initGradient("#gradient-canvas");
+if (window.matchMedia) {
+  function init () {
+    gradient.disconnect();
+    gradient.connect();
+  }
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', init, false);
+}

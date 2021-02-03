@@ -5,122 +5,183 @@
     <meta name='viewport' content='width=device-width,initial-scale=1'>
     <meta name='referrer' content='no-referrer'>
     <link rel='stylesheet' type='text/css' href='assets/base.css'>
+    <link rel='stylesheet' type='text/css' href='scene/scene.css'>
     <link rel='icon' type='image/png' href='assets/logo.png'>
     <link rel='apple-touch-icon' href='assets/logo.png'>
-    <title>Habitat by deora.earth</title>
+    <title>Habitat - Grow and collaborate on Ethereum</title>
     <meta name='twitter:card' content='summary_large_image'>
-    <meta name='twitter:site' content='@deora_earth'>
-    <meta name='twitter:title' content='Habitat by deora.earth'>
-    <meta name='twitter:description' content='Scaling community tools on Ethereum.'>
-    <meta name='twitter:creator' content='@deora_earth'>
-    <meta name='twitter:image' content='https://deora.earth/assets/launch.png'>
-    <meta property='og:title' content='Habitat by deora.earth'>
+    <meta name='twitter:site' content='@0xhabitat'>
+    <meta name='twitter:title' property='og:title' content='Habitat - Grow and collaborate on Ethereum'>
     <meta property='og:type' content='website'>
-    <meta property='og:url' content='https://deora.earth'>
-    <meta property='og:image' content='https://deora.earth/assets/launch.png'>
-    <meta property='og:description' content='Scaling community tools on Ethereum.'>
-    <meta property='og:site_name' content='Habitat by deora.earth'>
+    <meta property='og:url' content='https://0xhabitat.org'>
+    <meta name='twitter:image' property='og:image' content='assets/launchImage.jpg'>
+    <meta name='twitter:description' property='og:description' content='Scaling communities with Rollup technology.'>
     <script>
       if (window.location.hostname !== 'localhost' && window.location.protocol !== 'https:') {
         window.location.href = window.location.href.replace('http:', 'https:');
       }
     </script>
+    <script src='common/colorSchemeToggle.js'></script>
   </head>
   <body>
-    <canvas id='gradient-canvas'></canvas>
     <section class='content'>
-    <article>
-      <section>
-        <a class='navLogo' href='/'></a>
-        <h1>Layer 2 Governance Platform</h1>
-        <h3>Scaling community tools on Ethereum.</h3>
-      </section>
+      <div style='position:absolute;z-index:100;' id='colorSchemeToggle'></div>
 
-      <h1><br></h1>
-      <section>
-        <div class='flex row center'>
-          <a class='button alt' href='https://habitat.substack.com/'>Blog</a>
-          <a class='button alt big' href='https://mvp.deora.earth/'>Layer-2 Demo</a>
-          <a class='button alt' href='https://calendly.com/deora-earth/call'>Contact</a>
+      <div class='para'>
+        <div class='l1'></div>
+        <div class='l2'></div>
+        <div class='l3'></div>
+        <div class='l4' style='width:100%;'>
+          <a href='/'><object type='image/svg+xml' style='position:absolute;top:4rem;width:20rem;left:6rem;' data='assets/logoAnimated.svg'></object></a>
+          <h1><br></h1>
+          <div class='left padh' style='left:6rem;bottom:20vh;position:absolute;font-size:2vh;max-width:70vw;'>
+            <h1 class='whitetext'>Grow and collaborate on Ethereum</h1>
+            <h3 class='whitetext'>Scaling communities with Rollup technology.</h3>
+          </div>
+          <h1><br></h1>
         </div>
-      </section>
-
-      <h1><br></h1>
-      <section>
-        <h2>Communities on Habitat</h2>
-        <h3><br></h3>
-        <div class='flex row center evenly showcase'>
-          <a href='https://mvp.deora.earth'><img width='325px' src='assets/habitat.png'></a>
-          <a href='https://gov.leapdao.org'><img width='325px' src='assets/leap.png'></a>
-          <a href='https://vote.strudel.finance'><img width=325px' src='assets/strudel.png'></a>
-        </div>
-      </section>
-
-      <h1><br></h1>
-      <div style='overflow:hidden;'>
-        <img class='box' style='margin-bottom:-1px;' src='assets/waveTop.svg'>
       </div>
-      <section class='bgwhite'>
-        <div id='tech' class='flex row center evenly'>
-          <div>
-            <img width='195px' src='assets/doge.png'>
-            <h3><br></h3>
-            <h3>Proven Technology</h3>
-            <p>Good Habits DAI Hard.<br>EVM compatible.</p>
+      <canvas id='gradient-canvas'></canvas>
+
+      <section style='z-index:9;transform: translateZ(0)'>
+        <article>
+          <section>
+            <h1>Habitat is the place for communities to build,<br>experiment and grow. 🏕</h1>
+            <h1><br></h1>
+            <div class='flex row center'>
+              <a class='button blue' target='_blank' href='https://twitter.com/0xhabitat'>Twitter</a>
+              <a class='button lila' target='_blank' href='https://discord.com/invite/Pqdj73UTt6'>Discord</a>
+              <a class='button black' target='_blank' href='https://github.com/0xhabitat'>Github</a>
+              <a class='button yellow' target='_blank' href='https://0xhabitat.substack.com'>Blog</a>
+            </div>
+            <h1><br></h1>
+          </section>
+          <h1><br></h1>
+
+          <section>
+            <div>
+              <h1>Domains - A place for all of us</h1>
+              <div class='flex row center evenly'>
+                <p class='padh' style='max-width: 30rem'>
+Domains are communities that share the Habitat scaling infrastructure. Each Domain stays sovereign!
+
+All Domains and their members can submit transactions at a fraction of the mainnet cost, the shared Optimistic Rollup submits them all together.
+
+With practical innovation secured, domains can discover, crowdfund or build new features for their community.
+
+Habitat also connects voting with smart contract interactions and management of treasuries.
+
+Goodbye, multisig wallet.
+                </p>
+                <div class='padh'>
+                  <img class='minmax lighten' src='assets/drawing1.png'>
+                </div>
+              </div>
+            </div>
+          </section>
+          <div style='overflow:hidden;margin:-6vw 0;'>
+            <object class='box' style='width:100%;margin-top:-1px;' data='assets/sep.svg'></object>
           </div>
 
-          <div>
-            <img width='96px' src='assets/nutberry.png'>
-            <h3><br></h3>
-            <h3>L2 Rollup</h3>
-            <p>Scaling on NutBerry rollup with up to 97% cost savings.</p>
+          <section>
+            <div>
+              <h1>A Self-Sustained Ecosystem</h1>
+              <div class='flex row center evenly'>
+                <div class='padh'>
+                  <img class='minmax lighten' src='assets/drawing2.png'>
+                </div>
+                <p class='padh' style='max-width: 30rem'>
+Discover, Discuss, Propose, Vote. Decide, Together.
+Coordination via incentive design.
+
+Work on new features can be crowdfunded across all Domains. Access to new features can be bought per Domain and the profit goes to the creators and funders of the chosen feature.
+
+This secures an income stream for makers of new features and distributes dividends to their funders.
+
+The result is a ecosystem cycle that provides a healthy soil for all inhabitants.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <h1><br><br></h1>
+          <section class='bgwhite'>
+            <h1><br></h1>
+            <div class='flex row center evenly'>
+              <div class='left padh'>
+                <h1>Habitat Token</h1>
+                <p style='max-width: 40rem'>
+Together with you and the communities on Habitat we build a open-source,
+all-in-one community toolkit on Ethereum.
+
+Guide the Habitat network and decide about new features and upgrades for your community.
+
+Participate in the design of the infrastructure and improve the protocol by stacking your Habitat token for important signals.  
+                </p>
+              </div>
+              <div class='padv'>
+                <img src='assets/coins.svg'>
+                <h1><br></h1>
+                <a class='button yellow' target='_blank' href='https://0xhabitat.substack.com/subscribe'>Join the Token waitlist</a>
+              </div>
+            </div>
+            <h1><br></h1>
+          </section>
+          <h1><br><br></h1>
+
+          <div style='overflow:hidden;'>
+            <object class='box' style='width:100%;margin-bottom:-1px;' data='assets/waveTop.svg'></object>
+          </div>
+          <section class='bgwhite'>
+            <div id='tech' class='flex row center evenly'>
+              <div>
+                <img width='96px' src='assets/nutberry.png'>
+                <h3><br></h3>
+                <h3>Scaling on a Optimistic Rollup</h3>
+                <p class='padv'>Supports more people and saves up to 96% of transactions costs.</p>
+              </div>
+
+              <div>
+                <img width='96px' src='assets/raise-hand.svg'>
+                <h3><br></h3>
+                <h3>Owned and Governed by You.</h3>
+                <p class='padv'>Grow the Habitat by signaling new tools and vote on new features.</p>
+              </div>
+
+              <div>
+                <img width='96px' src='assets/distributed.svg'>
+                <h3><br></h3>
+                <h3>Independent and Autonomous</h3>
+                <p class='padv'>Communities on Habitat stay sovereign as “Domains”.<br>Your Domain, your Rules.</p>
+              </div>
+            </div>
+
+            <div class='flex col center'>
+              <img class='lighten' style='padding: 1rem; width: 98%;' src='assets/roadmap.svg'>
+              <h3><br></h3>
+              <a class='button yellow' target='_blank' href='https://mvp.0xhabitat.org'>Test the Demo 🎮</a>
+              <h3><br></h3>
+            </div>
+          </section>
+
+          <div style='overflow:hidden;'>
+            <object class='box' style='width:100%;margin-top:-1px;' data='assets/waveBottom.svg'></object>
           </div>
 
-          <div>
-            <img width='52px' src='assets/ethereum.png'>
+          <h1><br></h1>
+          <footer>
+            <div class='flex col center'>
+              <img class='logoShadow' width='64px' src='assets/logo.png'>
+              <h3><br></h3>
+              <a href='mailto:hello@0xhabitat.org'>hello@0xhabitat.org</a>
+              <p>© 2021 - Habitat Community</p>
+            </div>
             <h3><br></h3>
-            <h3>Ethereum</h3>
-            <p>Mainnet security and on-chain execution.</p>
-          </div>
-        </div>
+          </footer>
+          </artice>
       </section>
-
-      <h1><br></h1>
-      <section>
-        <h2>Join the Habitat community 🌝</h2>
-        <div class='flex row center'>
-          <a class='button secondary' href='https://twitter.com/deora_earth'>Twitter</a>
-          <a class='button secondary' href='https://discord.com/invite/Pqdj73UTt6'>Discord</a>
-          <a class='button secondary' href='https://github.com/deora-earth'>Github</a>
-        </div>
-      </section>
-
-      <h1><br></h1>
-      <section class='bgwhite'>
-        <div class='flex col center'>
-          <img style='padding: 1rem; width: 98%;' src='assets/roadmap.svg'>
-          <h3><br></h3>
-          <a class='button primary' href='https://mvp.deora.earth/'>Test the Demo 🎮</a>
-          <h3><br></h3>
-        </div>
-      </section>
-      <div style='overflow:hidden;'>
-        <img class='box' style='margin-top:-1px;' src='assets/waveBottom.svg'>
-      </div>
-
-      <h1><br></h1>
-      <footer>
-        <div class='flex col center'>
-          <img class='logoShadow' width='64px' src='assets/logo.png'>
-          <h3><br></h3>
-          <a href='mailto:hello@deora.earth'>hello@deora.earth</a>
-          <p>Decentralised Organisation Architectures</p>
-          <p>© deora.earth - Berlin 2020</p>
-        </div>
-        <h3><br></h3>
-      </footer>
-    </artice>
     </section>
     <script src='common/Gradient/script.js'></script>
+    <script src='scene/scene.js'></script>
   </body>
 </html>
