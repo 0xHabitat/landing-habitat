@@ -14,7 +14,7 @@
 .para > div {
   height: 110vh;
   position: absolute;
-  transition: none;
+  transition: all .07s linear;
   animation: none;
 }
 
