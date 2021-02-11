@@ -40,17 +40,26 @@
   background-image: url('day/1.png');
   background-image: -webkit-image-set(url('day/1.webp') 1x);
 }
+[webp-fallback="1"] .l1 {
+  background-image: url('day/1.png');
+}
 
 .l2 {
   z-index: 2;
   background-image: url('day/2.png');
   background-image: -webkit-image-set(url('day/2.webp') 1x);
 }
+[webp-fallback="1"] .l2 {
+  background-image: url('day/2.png');
+}
 
 .l3 {
   z-index: 3;
   background-image: url('day/3.png');
   background-image: -webkit-image-set(url('day/3.webp') 1x);
+}
+[webp-fallback="1"] .l3 {
+  background-image: url('day/3.png');
 }
 
 .l4 {
@@ -61,13 +70,22 @@
   background-image: url('night/1.png');
   background-image: -webkit-image-set(url('night/1.webp') 1x);
 }
+[data-theme="dark"][webp-fallback="1"] .l1 {
+  background-image: url('night/1.png');
+}
 [data-theme="dark"] .l2 {
   background-image: url('night/2.png');
   background-image: -webkit-image-set(url('night/2.webp') 1x);
 }
+[data-theme="dark"][webp-fallback="1"] .l2 {
+  background-image: url('night/2.png');
+}
 [data-theme="dark"] .l3 {
   background-image: url('night/3.png');
   background-image: -webkit-image-set(url('night/3.webp') 1x);
+}
+[data-theme="dark"][webp-fallback="1"] .l3 {
+  background-image: url('night/3.png');
 }
 
 @media (prefers-color-scheme: dark) {
@@ -75,25 +93,47 @@
     background-image: url('night/1.png');
     background-image: -webkit-image-set(url('night/1.webp') 1x);
   }
+  [webp-fallback="1"] .l1 {
+    background-image: url('night/1.png');
+  }
+
   .l2 {
     background-image: url('night/2.png');
     background-image: -webkit-image-set(url('night/2.webp') 1x);
   }
+  [webp-fallback="1"] .l2 {
+    background-image: url('night/2.png');
+  }
+
   .l3 {
     background-image: url('night/3.png');
     background-image: -webkit-image-set(url('night/3.webp') 1x);
+  }
+  [webp-fallback="1"] .l3 {
+    background-image: url('night/3.png');
   }
 
   [data-theme="light"] .l1 {
     background-image: url('day/1.png');
     background-image: -webkit-image-set(url('day/1.webp') 1x);
   }
+  [data-theme="light"][webp-fallback="1"] .l1 {
+    background-image: url('day/1.png');
+  }
+
   [data-theme="light"] .l2 {
     background-image: url('day/2.png');
     background-image: -webkit-image-set(url('day/2.webp') 1x);
   }
+  [data-theme="light"][webp-fallback="1"] .l2 {
+    background-image: url('day/2.png');
+  }
+
   [data-theme="light"] .l3 {
     background-image: url('day/3.png');
     background-image: -webkit-image-set(url('day/3.webp') 1x);
+  }
+  [data-theme="light"][webp-fallback="1"] .l3 {
+    background-image: url('day/3.png');
   }
 }
