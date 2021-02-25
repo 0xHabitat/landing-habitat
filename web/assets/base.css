@@ -18,10 +18,10 @@ div#colorSchemeToggle {
   float: right;
 }
 
-div#colorSchemeToggle.light {
+div#colorSchemeToggle.dark {
   background: white;
 }
-div#colorSchemeToggle.dark {
+div#colorSchemeToggle.light {
   background: black;
 }
 
@@ -31,7 +31,7 @@ div#colorSchemeToggle > div > div {
   line-height: 33px;
 }
 
-div#colorSchemeToggle.dark > div {
+div#colorSchemeToggle.light > div {
   margin-top: -32px;
 }
 
