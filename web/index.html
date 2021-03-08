@@ -20,6 +20,8 @@
       if (window.location.hostname !== 'localhost' && window.location.protocol !== 'https:') {
         window.location.href = window.location.href.replace('http:', 'https:');
       }
+
+ 
       (function() {
         {
           document.documentElement.setAttribute('x-ready', '0');
@@ -50,6 +52,17 @@
   </head>
   <body>
     <section class='content'>
+
+      <nav id="menu" class="burger">
+        <input type="checkbox" id="burger"/>
+        <label for="burger"></label>
+        <ul id="menu-items">
+            <li><a href="/" class="lightred"><span class="icon">🏕️</span> Home</a></li>
+            <li><a href="/evolution" class="lightgreen"><span class="icon">🌱</span> Evolution</a></li>
+            <li><a href="/token" class="lightstraw"><span class="icon">🌞</span> Token</a></li>
+        </ul>
+      </nav>
+
       <div style='position:absolute;z-index:100;' id='colorSchemeToggle'></div>
 
       <div class='para'>
@@ -67,6 +80,7 @@
         </div>
       </div>
       <canvas id='gradient-canvas'></canvas>
+      <div id="menu-breakpoint"></div>
 
       <section style='z-index:9;transform: translateZ(0)'>
         <article>
@@ -222,5 +236,6 @@ Participate in the design of the infrastructure and improve the protocol by stac
     </section>
     <script src='common/Gradient/script.js'></script>
     <script src='scene/scene.js'></script>
+    <script src='common/menu.js'></script>
   </body>
 </html>
