@@ -96,7 +96,7 @@
   align-items: center;
   color: black;
   font-style: normal;
-  font-size: 1.5em;
+  font-size: 2em;
   cursor: pointer;
   line-height: 32px;
   width: 32px;
@@ -163,7 +163,6 @@
 
 #menu.burger input:checked ~ label:before {
   content: "\00D7";
-  font-size: 2em;
 }
 
 
